@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buhera Ridge Lodge | Small lodge near Victoria Falls</title>
+<meta name="description" content="Six thatched chalets above the Zambezi.">
+<meta name="theme-color" content="#2f5d46">
+<style>
+:root{--bg:#eef2ec;--ink:#1d2b24;--muted:#4f5a52;--green:#2f5d46;--blue:#1f5c8a;--line:#c9d3c8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:42rem;margin:0 auto;padding:0 1.25rem}
+header{padding:.75rem 0}
+header .wrap{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;align-items:center;justify-content:space-between}
+.brand{font:700 1.25rem Georgia,"Times New Roman",serif;color:var(--green);text-decoration:none}
+nav a{display:inline-block;padding:.65rem .25rem;margin-right:1rem;color:var(--ink)}
+nav a:last-child{margin-right:0}
+nav a[aria-current]{font-weight:700;text-decoration:none;border-bottom:3px solid var(--green)}
+.ridge{display:block;width:100%;height:56px}
+h1,h2{font-family:Georgia,"Times New Roman",serif;color:var(--green);line-height:1.2}
+h1{font-size:clamp(2rem,7vw,3rem);margin:1.75rem 0 1rem}
+h2{font-size:1.5rem;margin:2.5rem 0 .5rem}
+.lead{font-size:1.2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0}
+.btn{display:inline-block;min-height:48px;padding:.7rem 1.25rem;border:2px solid var(--blue);border-radius:6px;font-weight:700;text-decoration:none}
+.main{background:var(--blue);color:#fff}
+.alt{color:var(--blue)}
+button.btn{font:inherit;font-weight:700;background:transparent;cursor:pointer}
+[hidden]{display:none!important}
+ol{padding-left:1.25rem}
+li{margin:.5rem 0}
+footer{margin-top:3rem;padding:1.5rem 0 2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<a class="brand" href="index.html">Buhera Ridge Lodge</a>
+<nav aria-label="Main">
+<a href="index.html" aria-current="page">Home</a>
+<a href="visit.html">Plan your visit</a>
+</nav>
+</div>
+</header>
+<svg class="ridge" viewBox="0 0 600 56" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#2f5d46" d="M0 56V34l50-14 55 12 70-26 65 22 75-16 70 20 70-24 65 18 80-10v40z"/></svg>
+
+<main class="wrap">
+<h1>Six thatched chalets above the Zambezi</h1>
+<p class="lead">A small, quiet lodge near Victoria Falls. Walk the bush at dawn, take a sundowner cruise on the river, and eat meals cooked over wood.</p>
+<div class="btns">
+<a class="btn main" href="https://wa.me/263771494341?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability.">Message us on WhatsApp</a>
+<a class="btn alt" href="visit.html">See rooms and rates</a>
+</div>
+
+<h2>Stay</h2>
+<p>Each chalet has a centralised heating and ventilation system(HVAC), a private deck, a mosquito-netted bed, and a bathroom with hot water. Solar lighting and a backup battery pack keep the lights and phone charging on during power cuts.</p>
+
+<h2>Do</h2>
+<p>Guided walks, river boat cruises, sunset bird watchings and trips to the Falls can be arranged on the day or before you arrive. Tell us what you would like and we will plan the days around it.</p>
+
+<h2>Eat</h2>
+<p>Breakfast and dinner are included. We cook with local ingredients and can cater for vegetarian and other dietary needs if you tell us ahead of time.</p>
+
+<h2>How to book</h2>
+<ol>
+<li>Message us your dates and the number of guests.</li>
+<li>We reply with availability and the price in US dollars.</li>
+<li>Pay a deposit to confirm your stay.</li>
+</ol>
+<p>No forms and no account to create. Most people book from their phone in a few messages.</p>
+</main>
+
+<footer>
+<div class="wrap">
+<p>WhatsApp or call: +263 77 149 4341<br>Email: simba@mobiletourism.com</p>
+<button type="button" class="btn alt" id="copy" hidden>Copy phone number</button>
+<p></p>
+<p></p>
+</div>
+</footer>
+<script>
+/* Enhancement only: the button appears if the browser can copy text. */
+(function(){
+var c=document.getElementById("copy");
+if(c){
+c.hidden=false;
+c.onclick=function(){
+var n="+263 77 149 4341";
+function ok(){c.textContent="Copied"}
+function manual(){c.textContent="Press and hold the number to copy"}
+function fallback(){
+var t=document.createElement("textarea");
+t.value=n;t.style.position="fixed";t.style.opacity="0";
+document.body.appendChild(t);t.select();
+try{document.execCommand("copy")?ok():manual()}catch(e){manual()}
+document.body.removeChild(t);
+}
+if(navigator.clipboard){navigator.clipboard.writeText(n).then(ok,fallback)}else{fallback()}
+};
+}
+})();
+</script>
+</body>
+</html>

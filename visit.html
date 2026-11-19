@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan your visit | Buhera Ridge Lodge</title>
+<meta name="description" content="Rooms and rates, the best time to visit, and how to get to Buhera Ridge Lodge.">
+<meta name="theme-color" content="#2f5d46">
+<style>
+:root{--bg:#eef2ec;--ink:#1d2b24;--muted:#4f5a52;--green:#2f5d46;--blue:#1f5c8a;--line:#c9d3c8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:42rem;margin:0 auto;padding:0 1.25rem}
+header{padding:.75rem 0}
+header .wrap{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;align-items:center;justify-content:space-between}
+.brand{font:700 1.25rem Georgia,"Times New Roman",serif;color:var(--green);text-decoration:none}
+nav a{display:inline-block;padding:.65rem .25rem;margin-right:1rem;color:var(--ink)}
+nav a:last-child{margin-right:0}
+nav a[aria-current]{font-weight:700;text-decoration:none;border-bottom:3px solid var(--green)}
+.ridge{display:block;width:100%;height:56px}
+h1,h2{font-family:Georgia,"Times New Roman",serif;color:var(--green);line-height:1.2}
+h1{font-size:clamp(2rem,7vw,3rem);margin:1.75rem 0 1rem}
+h2{font-size:1.5rem;margin:2.5rem 0 .5rem}
+.lead{font-size:1.2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0}
+.btn{display:inline-block;min-height:48px;padding:.7rem 1.25rem;border:2px solid var(--blue);border-radius:6px;font-weight:700;text-decoration:none}
+.main{background:var(--blue);color:#fff}
+.alt{color:var(--blue)}
+button.btn{font:inherit;font-weight:700;background:transparent;cursor:pointer}
+.btn[aria-pressed="true"]{background:var(--blue);color:#fff}
+[hidden]{display:none!important}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:.75rem .5rem;border-bottom:1px solid var(--line)}
+th{border-bottom:2px solid var(--green)}
+.note{color:var(--muted);font-size:.95rem}
+footer{margin-top:3rem;padding:1.5rem 0 2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<a class="brand" href="index.html">Buhera Ridge Lodge</a>
+<nav aria-label="Main">
+<a href="index.html">Home</a>
+<a href="visit.html" aria-current="page">Plan your visit</a>
+</nav>
+</div>
+</header>
+<svg class="ridge" viewBox="0 0 600 56" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#2f5d46" d="M0 56V34l50-14 55 12 70-26 65 22 75-16 70 20 70-24 65 18 80-10v40z"/></svg>
+
+<main class="wrap">
+<h1>Plan your visit</h1>
+<p class="lead">Rooms and prices, the best time to come, and how to get here.</p>
+
+<h2>Rooms and rates</h2>
+<div class="tbl">
+<table>
+<thead>
+<tr><th scope="col">Chalet</th><th scope="col">Sleeps</th><th scope="col">Per night (USD)</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Garden chalet</th><td>2</td><td>$120</td></tr>
+<tr><th scope="row">River-view chalet</th><td>2</td><td>$160</td></tr>
+<tr><th scope="row">Family chalet</th><td>4</td><td>$240</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Per chalet, including breakfast and dinner. Prices subject to change.</p>
+
+<h2>Best time to visit</h2>
+<div id="seasons">
+<p data-s="dry"><strong>Dry season, April to August:</strong> cooler days with a slight chill in winter, and wildlife is easier to see around water due too high visibility.</p>
+<p data-s="wet"><strong>Rainy season, September to March:</strong> green landscapes, many birds, and afternoon storms.</p>
+</div>
+<p>Message us if you are not sure which suits you.</p>
+
+<h2>Getting here</h2>
+<p>We are about 25 minutes by road from Victoria Falls Airport. We can collect you if you send your flight details. Driving yourself instead? Ask us for directions and we will send a pin on WhatsApp.</p>
+
+<h2>Before you travel</h2>
+<p>Check the current visa and entry rules for your passport before you book flights. Bring a hat, sunscreen, and a light jacket for early mornings.</p>
+
+<h2>Ready to book?</h2>
+<p>Tell us your dates and how many guests. We reply with availability and the total price.</p>
+<div class="btns">
+<a class="btn main" href="https://wa.me/263771494341?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability.">Message us on WhatsApp</a>
+</div>
+</main>
+
+<footer>
+<div class="wrap">
+<p>WhatsApp or call: +263 77 149 4341<br>Email: simba@mobiletourism.com</p>
+<button type="button" class="btn alt" id="copy" hidden>Copy phone number</button>
+<p>Built to load quickly on mobile data: no video, no sliders, no external fonts or scripts.</p>
+<p>Sample content for a coursework prototype. The lodge, prices, and contact details are placeholders.</p>
+</div>
+</footer>
+<script>
+/* Enhancements only: without JavaScript, both seasons and the plain page still work. */
+(function(){
+var box=document.getElementById("seasons");
+if(box){
+var ps=box.querySelectorAll("p"),bar=document.createElement("div"),btns=[];
+bar.className="btns";
+function show(k){
+ps.forEach(function(p){p.hidden=p.dataset.s!==k});
+btns.forEach(function(b){b.setAttribute("aria-pressed",b.dataset.s===k)});
+}
+[["dry","Dry season"],["wet","Rainy season"]].forEach(function(s){
+var b=document.createElement("button");
+b.type="button";b.className="btn alt";b.dataset.s=s[0];b.textContent=s[1];
+b.onclick=function(){show(s[0])};
+bar.appendChild(b);btns.push(b);
+});
+box.parentNode.insertBefore(bar,box);
+var m=new Date().getMonth();
+show(m>=4&&m<=9?"dry":"wet"); /* opens on the current season */
+}
+var c=document.getElementById("copy");
+if(c){
+c.hidden=false;
+c.onclick=function(){
+var n="263 77 149 4341";
+function ok(){c.textContent="Copied"}
+function manual(){c.textContent="Press and hold the number to copy"}
+function fallback(){
+var t=document.createElement("textarea");
+t.value=n;t.style.position="fixed";t.style.opacity="0";
+document.body.appendChild(t);t.select();
+try{document.execCommand("copy")?ok():manual()}catch(e){manual()}
+document.body.removeChild(t);
+}
+if(navigator.clipboard){navigator.clipboard.writeText(n).then(ok,fallback)}else{fallback()}
+};
+}
+})();
+</script>
+</body>
+</html>
